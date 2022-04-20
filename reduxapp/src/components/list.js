@@ -60,7 +60,7 @@ const List = ({data}) => {
                     {
                         inputeditSta &&  inputeditData ? 
                         <>
-                        <input className="form-control" value={inputData}  placeholder={'Add Items'} onChange={(e) => setinputData(e.target.value)}/>
+                        <input className="form-control" value={inputData}  placeholder={'Edit Items'} onChange={(e) => setinputData(e.target.value)}/>
                         <Form.Select  value={inputstatus} onChange={(e) => setinputstatus(e.target.value)}>
                         <option>status</option>
                         <option value="Active">Active</option>
