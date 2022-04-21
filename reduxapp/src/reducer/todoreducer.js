@@ -1,10 +1,6 @@
 const initialState={
     todoList: [
-        {
-        title:'First',
-        Status : 'Active',
-        id: '1'
-        }
+       
     ]
 }
 
