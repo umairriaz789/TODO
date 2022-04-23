@@ -26,7 +26,7 @@ function OffCanvasExample({ name, ...props }) {
         </Button>
         <Offcanvas show={show} onHide={handleClose} {...props}>
           <Offcanvas.Header closeButton>
-            <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+            <Offcanvas.Title>List of Active Products</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
           {
@@ -49,7 +49,7 @@ function OffCanvasExample({ name, ...props }) {
 export default function Example() {
     return (
       <>
-        {['Active', 'InActive'].map((placement, idx) => (
+        {['Active Status'].map((placement, idx) => (
           <OffCanvasExample key={idx} placement={placement} name={placement} />
         ))}
       </>
