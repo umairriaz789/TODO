@@ -16,6 +16,8 @@ const List = ({data}) => {
 
 
     const dispatch = useDispatch();
+
+    
     const handledelete =(id)=>{
         dispatch(DELETE({id}))
     }

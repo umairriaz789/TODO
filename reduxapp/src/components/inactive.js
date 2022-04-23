@@ -26,12 +26,12 @@ function OffCanvasExample({ name, ...props }) {
         </Button>
         <Offcanvas show={show} onHide={handleClose} {...props}>
           <Offcanvas.Header closeButton>
-            <Offcanvas.Title>List of Active Products</Offcanvas.Title>
+            <Offcanvas.Title>List of InActive Products</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
           {
                 list.map((item) => {
-                  if (item.Status === 'Active')
+                  if (item.Status === 'Inactive')
                     return (
                        <div key={item.id}>
                         <List data={item}/>
@@ -46,10 +46,10 @@ function OffCanvasExample({ name, ...props }) {
     );
   }
   
-export default function Example() {
+export default function Inactive() {
     return (
       <>
-        {['Active Status'].map((placement, idx) => (
+        {['InActive Status'].map((placement, idx) => (
           <OffCanvasExample key={idx} placement={placement} name={placement} />
         ))}
       </>
