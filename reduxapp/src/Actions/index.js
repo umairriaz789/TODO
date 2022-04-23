@@ -32,10 +32,10 @@ export const ALLDELETE = () => ({
 })
 
 
-export const STATUS= ({Status,id}) => ({
-    type:'STATUS',
+export const ACTIVE= ({title,Status}) => ({
+    type:'ACTIVE',
     payload:{
-        Status,
-        id
+        title,
+        Status
     } 
 })

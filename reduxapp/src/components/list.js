@@ -44,11 +44,11 @@ const List = ({data}) => {
 
     return(
         <div>
+        
             <div className="comp">
             <Table responsive>
             <tbody>
                 <tr>
-             
                     <td>{data.title}</td>
                     <td>{data.Status}</td>
                     <td><Button variant="danger" onClick={()=> handledelete(data.id)}>Delete</Button></td>

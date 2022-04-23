@@ -6,6 +6,7 @@ import { v4 as uuid } from 'uuid';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import '../App.css';
+import Table from "react-bootstrap/esm/Table";
 
 
 const Todo =()=> {
@@ -18,6 +19,8 @@ const Todo =()=> {
         return val.todoreducer.todoList
     })
 
+
+    console.log(list);
     const dispath = useDispatch();
 
     const handletodo =(task,Sta)=>{
@@ -54,6 +57,24 @@ const Todo =()=> {
                 <Button onClick={()=>handletodo(inputData,inputstatus)}>Add Todo</Button>
                 </div>
 
+            <div>
+                <Table>
+                <div>
+            <Table responsive>
+                <thead>
+                <tr>
+
+                 <th>TITLE</th>
+                 <th>STATUS</th>
+                 <th>DELETE</th>
+                 <th>EDIT</th>
+               </tr>
+            </thead>
+                </Table>
+            </div>
+                </Table>
+            </div>
+
             </div>
             {
                 list.map((item) => {
@@ -65,8 +86,10 @@ const Todo =()=> {
                     )
                 })
             }
+            
              <Button variant="danger" onClick={()=>dispath(ALLDELETE())}>Delete All</Button>
         </div>
+        
     )
 }
 

@@ -46,6 +46,28 @@ const todoreducer = (state = initialState , action) => {
             }
         }
 
+
+        
+        case 'ACTIVE':{
+            return{ ...state, todoList: state.todoList.map((item)=>{
+                if (item.Status === 'Active'){
+                    return {
+                        ...item,
+                         title: action.payload.title,
+                         Status: action.payload.Status,
+                        
+                        }
+                }
+
+                else {
+                    return item;
+                }
+
+            }
+
+            )}
+        }
+
         default: {
             return state
         }
